@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.73ec28f6.chunk.css",
+    "main.js": "/static/js/main.db97ab56.chunk.js",
+    "main.js.map": "/static/js/main.db97ab56.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
+    "static/js/2.6a34d050.chunk.js": "/static/js/2.6a34d050.chunk.js",
+    "static/js/2.6a34d050.chunk.js.map": "/static/js/2.6a34d050.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.75d58ff0ff40871709bf0d9b4416396b.js": "/precache-manifest.75d58ff0ff40871709bf0d9b4416396b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.73ec28f6.chunk.css.map": "/static/css/main.73ec28f6.chunk.css.map",
+    "static/js/2.6a34d050.chunk.js.LICENSE.txt": "/static/js/2.6a34d050.chunk.js.LICENSE.txt",
+    "static/media/LSE_logo.png": "/static/media/LSE_logo.020d80eb.png",
+    "static/media/arrow.svg": "/static/media/arrow.5e218336.svg",
+    "static/media/boomerang.svg": "/static/media/boomerang.b4dd3ec3.svg",
+    "static/media/prof.jpg": "/static/media/prof.b575749a.jpg",
+    "static/media/task_interview.png": "/static/media/task_interview.bee343a7.png",
+    "static/media/task_placeholder.png": "/static/media/task_placeholder.512281b3.png",
+    "static/media/task_read.png": "/static/media/task_read.9374a905.png",
+    "static/media/task_review.png": "/static/media/task_review.898cfd54.png",
+    "static/media/task_sleep.png": "/static/media/task_sleep.65edef62.png",
+    "static/media/task_teach.png": "/static/media/task_teach.2e081e88.png",
+    "static/media/task_wait.png": "/static/media/task_wait.2ace30f5.png",
+    "static/media/task_write.png": "/static/media/task_write.3e7ee922.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b85ec0.js",
+    "static/js/2.6a34d050.chunk.js",
+    "static/css/main.73ec28f6.chunk.css",
+    "static/js/main.db97ab56.chunk.js"
+  ]
+}
