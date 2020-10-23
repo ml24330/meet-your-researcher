@@ -9,6 +9,7 @@ import RQ1 from './pages/RQ1';
 import RQ2 from './pages/RQ2';
 import RQ3 from './pages/RQ3';
 import RQ4 from './pages/RQ4';
+import FinalQuiz from './pages/FinalQuiz';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="/q4" exact>
               <RQ4 />
+            </Route>
+            <Route path="/quiz" exact>
+              <FinalQuiz />
             </Route>
           </Switch>
         </div>

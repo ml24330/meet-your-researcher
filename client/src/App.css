@@ -1,3 +1,7 @@
+table, tr, td {
+  border: 1px solid black;
+}
+
 .App {
   text-align: center;
 }
@@ -15,6 +19,7 @@
   position: fixed;
   bottom: 20px;
   width: 100vw;
+  z-index: 999;
 }
 
 .arrow-from,
@@ -23,6 +28,19 @@
   opacity: 0.8;
   position: absolute;
   bottom: 10px;
+}
+
+.arrow-from::after,
+.arrow-to::after {
+  content: "";
+  position: absolute;
+  border-radius: 30px;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  background: rgba(255,255,255, 0.9);
+  z-index: -1;
 }
 
 .arrow-from:hover,
@@ -218,6 +236,92 @@
   width: 100%;
   background: aliceblue;
   padding: 10px 10px 10px 60px;
+}
+
+.question-container {
+  border-radius: 5px;
+  background: rgba(201, 218, 189, 0.5);
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px 5px;
+}
+
+.choices-container {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.choice {
+  max-width: 500px;
+}
+
+.quiz-img {
+  max-width: 80%;
+  display: block;
+  margin: 5px auto;
+}
+
+.quiz-submit {
+  width: 100%;
+  margin: 7px;
+}
+
+.quiz-submit button {
+  width: 120px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Roboto;
+}
+
+.quiz-question {
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.quiz-input {
+  margin-top: 4px;
+}
+
+.quiz-label {
+  display: block;
+}
+
+.answer-container {
+  font-size: 1.2rem;
+  width: 90%;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+.summary {
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.summary table {
+  margin: auto;
+}
+
+.summary td {
+  width: 100px;
+}
+
+.answer-container button,
+.summary-text button {
+  display: block;
+  margin: 5px auto;
+  height: 30px;
+}
+
+.summary-text {
+  margin: 10px auto;
+  font-size: 1.4rem;
+  width: 80%;
 }
 
 @media only screen and (max-width: 450px) {
