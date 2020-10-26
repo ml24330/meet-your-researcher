@@ -324,6 +324,48 @@ table, tr, td {
   width: 80%;
 }
 
+.leaderboard * {
+  border: none;
+}
+
+.leaderboard thead {
+  font-weight: bold;
+}
+
+.leaderboard table {
+  width: 400px;
+  margin: auto;
+}
+
+.timer {
+  position: fixed;
+  top: 75px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.summary-publish input {
+  width: 150px;
+  height: 19px;
+  margin: 0 10px;
+  border: none;
+  font-size: 1rem;
+  background: inherit;
+  border-bottom: 1px solid black;
+}
+
+.summary-publish button {
+  height: 25px;
+  display: inline-block;
+}
+
+.summary-alert {
+  color: red;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 450px) {
   .nav-class {
     width: 100px;

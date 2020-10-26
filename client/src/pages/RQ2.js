@@ -1,6 +1,5 @@
 import React from 'react';
 import Arrows from '../components/Arrows';
-import Quiz from '../components/Quiz';
 import QuizQuestion from '../components/QuizQuestion';
 import img1 from '../media/img1.png';
 

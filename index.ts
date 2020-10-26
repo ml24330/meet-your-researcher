@@ -2,11 +2,22 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import formidable from 'express-formidable';
+import mongoose from 'mongoose';
+import apiRouter from './apiRouter';
 
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 app.use(cookieParser());
+
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_NAME}:${process.env.MONGODB_PW}@cluster0.swmsg.mongodb.net/Cluster0?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once('open', () => console.log("connection established"));
+
+app.use("/api", apiRouter);
+
 app.use(formidable());
 
 const authMiddleware = (req, res, next) => {
