@@ -190,7 +190,7 @@ export default function FinalQuiz() {
                     <Leaderboard />
                 </div>
             )}
-            <Arrows from="q4" to="/" from_name={<div><div style={{color: "darkred", display: "inline"}}>Q4:</div>Are data protection laws effective?</div>} to_name="Return to About Page" />
+            <Arrows from="q4" to="/" from_name={<div><div style={{color: "darkred", display: "inline"}}>Q4: </div>Data protection laws</div>} to_name="Return to About Page" />
         </div>
     )
 }

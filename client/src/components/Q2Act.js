@@ -91,9 +91,9 @@ export default function Q2Act({ isOpen, close }) {
             return newImages;
         });
         if(currentPerson !== "BIDEN"){
-            setAlertMessage(<div><button onClick={() => handleNextPerson(currentPerson)}>Next person</button></div>);
+            setAlertMessage(<div><span>These were the right and wrong choices! How many did you figure out? </span><button onClick={() => handleNextPerson(currentPerson)}>Next person</button></div>);
         }else{
-            setAlertMessage(<div><button onClick={() => handleNextPerson(currentPerson)}>Close modal</button></div>)
+            setAlertMessage(<div><span>These were the right and wrong choices! How many did you figure out? </span><button onClick={() => handleNextPerson(currentPerson)}>Close modal</button></div>)
         }
     }
 
@@ -138,6 +138,9 @@ export default function Q2Act({ isOpen, close }) {
                         <div className="modal-flex">
                             <div className="modal-question">
                                 <img src={profiles[currentPerson]} />
+                                <div className="modal-question-desc">
+                                    Above are some metadata and search history for this person. Can you correctly select the tweets coming from him?
+                                </div>
                             </div>
                             <div className="tweets">
                                     {images.map((img, idx) => (

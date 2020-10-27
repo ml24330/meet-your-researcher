@@ -10,18 +10,18 @@ export default function NavBar() {
                 <div className="nav-class">
                     <p>Being a researcher</p>
                     <div className="nav-dropdown-content">
-                        <Link to="/">About us</Link>
-                        <Link to="/tasks">Tasks of a researcher</Link>
-                        <Link to="/process">Research and review processes</Link>
+                        <Link to="/">About Prof. Whitley</Link>
+                        <Link to="/tasks">Tasks</Link>
+                        <Link to="/process">Starting a research</Link>
                     </div>
                 </div>
                 <div className="nav-class">
                     <p>Research areas</p>
                     <div className="nav-dropdown-content">
-                        <Link to="/q1">Are technologies at fault?</Link>
-                        <Link to="/q2">Can data be truly anonymised?</Link>
-                        <Link to="/q3">Will data collection methods change with big data?</Link>
-                        <Link to="/q4">Are data protection laws effective?</Link>
+                        <Link to="/q1">Trusting surveillance</Link>
+                        <Link to="/q2">Anonymization and metadata</Link>
+                        <Link to="/q3">Garbage In, Garbage Out</Link>
+                        <Link to="/q4">Data protection laws</Link>
                         <Link to="/quiz">Take a quiz</Link>
                     </div>
                 </div>

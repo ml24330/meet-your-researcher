@@ -2,8 +2,12 @@ table, tr, td {
   border: 1px solid black;
 }
 
+* {
+  word-wrap: break-word;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
 img {
-  pointer-events: none;
   -webkit-touch-callout: none; 
   -webkit-user-select: none; 
   -khtml-user-select: none; 
@@ -73,9 +77,9 @@ img {
 
 .arrow-name {
   font-weight: bold;
-  font-family: Roboto;
   width: 110%;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
+  font-family: Arial;
 }
 
 .footer {
@@ -192,6 +196,14 @@ img {
 
 .task-content {
   padding: 0 110px;
+  font-size: 1.1rem;
+}
+
+.task-content-title {
+  font-weight: bold;
+  text-align: left;
+  margin: 25px 20px;
+  font-size: 1.2rem;
 }
 
 .page-title {
@@ -224,7 +236,7 @@ img {
   text-align: left;
   width: 85%;
   min-width: 300px;
-  margin: 10px auto;
+  margin: 0 auto 10px auto;
 }
 
 .collapse-title {
@@ -243,7 +255,7 @@ img {
 }
 
 .collapse-content {
-  width: 100%;
+  width: calc(100% - 50px);
   background: aliceblue;
   padding: 10px 10px 10px 60px;
 }
@@ -382,7 +394,7 @@ img {
   bottom: 10px;
   left: 20px;
   right: 20px;
-  background: grey;
+  background: coral;
   border-radius: 20px;
   z-index: 9999;
 }
@@ -395,21 +407,30 @@ img {
   left: 5px;
 }
 
+.modal img {
+  pointer-events: none;
+}
+
 .modal-flex {
   display: flex;
   bottom: 15%;
 }
 
 .modal-question {
-  flex-basis: 30%;
+  width: 30%;
 }
 
 .modal-question img {
-  width: 350px;
+  width: 90%;
+}
+
+.modal-question-desc {
+  margin: 10px 5px;
+  font-size: 1.3rem;
 }
 
 .tweets {
-  flex-basis: 70%;
+  width: 70%;
 
   display: flex;
   flex-wrap: wrap;
@@ -422,17 +443,21 @@ img {
   margin: 5px;
 }
 
+.tweet-img:hover img {
+  height: 140px;
+}
+
 .img-label {
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 5px;
-  bottom: 5px;
-  right: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 15px);
   background: rgba(255, 255, 255, 0.5);
 }
 
 .tick-cross {
-  height: 110px;
+  height: 100px;
 }
 
 .modal-foot {
@@ -442,13 +467,79 @@ img {
   height: 10%;
 }
 
-.modal-submit {
-  margin: 10px 0;
+.modal-submit,
+.modal-alert {
+  margin: 20px 0;
 }
 
-.modal-submit button {
+.modal-foot button {
   height: 30px;
   width: 100px;
+}
+
+.page--content {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page--subtitle {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 10px 10px 5px 10px;
+}
+
+.page--paragraph {
+  text-align: left;
+  width: 100%;
+  font-size: 1.1rem;
+  margin: 10px 10px 20px 10px;
+}
+
+.page--img {
+  width: 60%;
+  margin: 10px auto 0 auto;
+}
+
+.page--img-desc {
+  width: 100%;
+  margin: 0 5px 5px 5px;
+}
+
+.page--img img {
+  height: 350px;
+  max-width: 100%;
+}
+
+.page--link {
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.page--link:hover p {
+  color: red;
+  border-color: red;
+}
+
+.page--link p {
+  display: inline;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  margin: auto;
+}
+
+.page--bib {
+  width: 100%;
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: right;
+  margin: 30px 2px 2px 2px;
+}
+
+.page--bib p {
+  margin: 0;
 }
 
 @media only screen and (max-width: 450px) {

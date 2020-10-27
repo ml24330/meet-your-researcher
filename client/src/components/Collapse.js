@@ -3,7 +3,7 @@ import boomerang from '../media/boomerang.svg';
 
 export default function Collapse({title, color, children}) {
 
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     return (
         <div className="collapse-container">
