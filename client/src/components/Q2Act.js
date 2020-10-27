@@ -13,6 +13,7 @@ import cross from '../media/cross.png';
 import trump_acc from '../media/dt_acc.jpg';
 import biden_acc from '../media/jb_acc.jpg';
 import bernie_acc from '../media/bs_acc.jpg';
+import close_modal from '../media/close_modal.svg';
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -53,7 +54,7 @@ export default function Q2Act({ isOpen, close }) {
             img.src = image.src;
             return;
         });
-        [tick, cross].map(link => {
+        [tick, cross, close_modal, trump_acc, biden_acc, bernie_acc].map(link => {
             let img = new Image();
             img.src = link;
             return;
@@ -131,16 +132,16 @@ export default function Q2Act({ isOpen, close }) {
         <>
            {open && (
                <div className="modal">
-                   <div className="modal-close">
-                        <button onClick={() => {setOpen(false); close(false)}}>close</button>
+                   <div className="modal-close" onClick={() => {setOpen(false); close(false)}}>
+                        <img style={{width: 30, height: 30}} src={close_modal} alt="close modal" />
                    </div>
                    <div className="modal-content">
                         <div className="modal-flex">
                             <div className="modal-question">
                                 <img src={profiles[currentPerson]} />
                                 <div className="modal-question-desc">
-                                    Above are some metadata and search history for this person. Can you correctly select the tweets coming from him?
-                                </div>
+                                    Shown here is a twitter account with some <strong>fake</strong> search data. Could you locate all the <strong>real</strong> tweets sent by this person?
+                                </div>  
                             </div>
                             <div className="tweets">
                                     {images.map((img, idx) => (

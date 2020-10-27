@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import AboutPage from './pages/AboutPage';
@@ -11,12 +11,25 @@ import RQ3 from './pages/RQ3';
 import RQ4 from './pages/RQ4';
 import FinalQuiz from './pages/FinalQuiz';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import background from './media/background.jpg';
 
 function App() {
+
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    setHeight(document.querySelector(".content").scrollHeight);
+    const interval = setInterval(() => {
+      setHeight(document.querySelector(".content").scrollHeight);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Router>
       <div className="App">
         <NavBar />
+        <div className="background" style={{backgroundImage: `url(${background})`, opacity: 0.07, backgroundPosition: "top", backgroundSize: "50vw", height: height}} />
         <div className="content">
           <Switch>
             <Route path="/" exact>

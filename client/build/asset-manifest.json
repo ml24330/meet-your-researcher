@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.8511d4f9.chunk.css",
-    "main.js": "/static/js/main.efe4a915.chunk.js",
-    "main.js.map": "/static/js/main.efe4a915.chunk.js.map",
+    "main.css": "/static/css/main.09864865.chunk.css",
+    "main.js": "/static/js/main.a1950e1c.chunk.js",
+    "main.js.map": "/static/js/main.a1950e1c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
-    "static/js/2.2b81533d.chunk.js": "/static/js/2.2b81533d.chunk.js",
-    "static/js/2.2b81533d.chunk.js.map": "/static/js/2.2b81533d.chunk.js.map",
+    "static/js/2.85798da5.chunk.js": "/static/js/2.85798da5.chunk.js",
+    "static/js/2.85798da5.chunk.js.map": "/static/js/2.85798da5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f2322ef4d7d592c3b8864527d101b36e.js": "/precache-manifest.f2322ef4d7d592c3b8864527d101b36e.js",
+    "precache-manifest.a01f12a0ae10fe7dad2c023dd325c6e8.js": "/precache-manifest.a01f12a0ae10fe7dad2c023dd325c6e8.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.8511d4f9.chunk.css.map": "/static/css/main.8511d4f9.chunk.css.map",
-    "static/js/2.2b81533d.chunk.js.LICENSE.txt": "/static/js/2.2b81533d.chunk.js.LICENSE.txt",
+    "static/css/main.09864865.chunk.css.map": "/static/css/main.09864865.chunk.css.map",
+    "static/js/2.85798da5.chunk.js.LICENSE.txt": "/static/js/2.85798da5.chunk.js.LICENSE.txt",
     "static/media/LSE_logo.png": "/static/media/LSE_logo.020d80eb.png",
     "static/media/arrow.svg": "/static/media/arrow.5e218336.svg",
+    "static/media/background.jpg": "/static/media/background.4ec42b8a.jpg",
     "static/media/boomerang.svg": "/static/media/boomerang.b4dd3ec3.svg",
     "static/media/bs_acc.jpg": "/static/media/bs_acc.f1bc0fdb.jpg",
+    "static/media/close_modal.svg": "/static/media/close_modal.461bb192.svg",
     "static/media/dt_acc.jpg": "/static/media/dt_acc.42399dc1.jpg",
-    "static/media/hve.jpg": "/static/media/hve.ea580a97.jpg",
-    "static/media/hvq.jpg": "/static/media/hvq.c492e843.jpg",
+    "static/media/hve.jpg": "/static/media/hve.c6f97174.jpg",
+    "static/media/hvq.jpg": "/static/media/hvq.31acd545.jpg",
     "static/media/hvw.jpg": "/static/media/hvw.9dd6d8eb.jpg",
     "static/media/img1.png": "/static/media/img1.f0b9b15e.png",
     "static/media/jb_acc.jpg": "/static/media/jb_acc.243e89a8.jpg",
@@ -47,8 +49,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
-    "static/js/2.2b81533d.chunk.js",
-    "static/css/main.8511d4f9.chunk.css",
-    "static/js/main.efe4a915.chunk.js"
+    "static/js/2.85798da5.chunk.js",
+    "static/css/main.09864865.chunk.css",
+    "static/js/main.a1950e1c.chunk.js"
   ]
 }

@@ -84,7 +84,7 @@ export default function FinalQuiz() {
     return (
         <div>
             <div className="page-title">Final quiz</div>
-            <div className="summary">
+            {currentQ > 0 && (<div className="summary">
                 <table>
                     <tbody>
                         <tr>
@@ -99,7 +99,7 @@ export default function FinalQuiz() {
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div>)}
             {currentQ > 0 && (
                 <div className="timer">
                     {timeTaken}
@@ -107,7 +107,7 @@ export default function FinalQuiz() {
             )}
             {currentQ === 0 && (
                 <div className="summary-text">
-                    Thank you for your interest in Dr Whitley's work! Attempt a summative quiz if you feel confident:
+                    Thank you for your interest in Dr Whitley's work! Here's a summative quiz for you to attempt:
                     <button onClick={handleStart}>Start quiz</button>
                 </div>
             )}
@@ -172,9 +172,10 @@ export default function FinalQuiz() {
                 )}}
             </QuizQuestion>}
             {summaryOpen && (
+                <div className="page--content">
                 <div className="summary-text">
                     <div className="summary-time">
-                        Congratulations! You got {numCorrect} correct taking {timeTaken} seconds
+                        Game over! You got {numCorrect} correct taking {timeTaken} seconds
                     </div>
                     {!published && numCorrect === 3 && (
                         <div className="summary-publish">
@@ -188,6 +189,7 @@ export default function FinalQuiz() {
                         {alertMessage}
                     </div>
                     <Leaderboard />
+                </div>
                 </div>
             )}
             <Arrows from="q4" to="/" from_name={<div><div style={{color: "darkred", display: "inline"}}>Q4: </div>Data protection laws</div>} to_name="Return to About Page" />

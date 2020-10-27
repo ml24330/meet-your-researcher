@@ -27,7 +27,7 @@ export default function RQ3() {
                     <Collapse title="Garbage data" color="lightgreen">
                         <p>Furthermore, as people are always more connected, companies try to capture data directly from the people. But this information does not necessarily reflect the truth as people have much leeway to fake their user-entered data. This raises another issue for data analytics, as most of this data is likely to be “garbage”. For example, many e-commerce sites recommend personalized items depending on user-entered data. If a consumer claims to be 45 years old on the website, while he is actually 18, it is impossible for the companies to detect that, and they would then recommend him what 45-year-old people are most likely to like.</p>
                     </Collapse>
-                    <p>Prof. Whitley believes that understanding the capacity of AI and its possible mistakes is crucial to get the most out of it. “That means appreciating its limitations as much as its potential”. </p>
+                    <p>Dr Whitley believes that understanding the capacity of AI and its possible mistakes is crucial to get the most out of it. “That means appreciating its limitations as much as its potential”. </p>
                 </div>
                 <div className="page--img">
                     <img src={q3_2} alt="q3_2" />

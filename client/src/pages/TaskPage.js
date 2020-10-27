@@ -74,8 +74,8 @@ export default function TaskPage() {
                 </div>  
             </div>
             {open && (
-                <div className="task-content">
-                    <div className="task-content-title">Researchers at LSE have many roles. Some of these roles are entirely research-oriented, while others are not. Below are some of the tasks a researcher would most likely perform, as highlighted by Prof. Whitley:</div>
+                <div className="page--content">
+                    <div className="page--paragraph" style={{fontSize: "1.4rem", fontWeight: "bold"}}>Researchers at LSE have many roles. Some of these roles are entirely research-oriented, while others are not. Below are some of the tasks a researcher would most likely perform, as highlighted by Prof. Whitley:</div>
                     <Collapse title="Reading research proposals" color="coral" >
                         {taskList[1].desc}
                     </Collapse>

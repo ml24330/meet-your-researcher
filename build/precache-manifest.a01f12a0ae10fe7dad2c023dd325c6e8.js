@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be69a71183590b7c49deb40b5898658e",
+    "revision": "5d06d76942271f3e0d37d41a37d0cd0b",
     "url": "/index.html"
   },
   {
-    "revision": "6dc31af6f61c269c935e",
-    "url": "/static/css/main.8511d4f9.chunk.css"
+    "revision": "800b078ea690ecadb768",
+    "url": "/static/css/main.09864865.chunk.css"
   },
   {
-    "revision": "1fc1fec4359a6885b16e",
-    "url": "/static/js/2.2b81533d.chunk.js"
+    "revision": "3ec3cf4d5cd497336eb4",
+    "url": "/static/js/2.85798da5.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/static/js/2.2b81533d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.85798da5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6dc31af6f61c269c935e",
-    "url": "/static/js/main.efe4a915.chunk.js"
+    "revision": "800b078ea690ecadb768",
+    "url": "/static/js/main.a1950e1c.chunk.js"
   },
   {
     "revision": "9b4e396c183e42c1fa5c",
@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/arrow.5e218336.svg"
   },
   {
+    "revision": "4ec42b8a04b60c825843bcbeb08cfdef",
+    "url": "/static/media/background.4ec42b8a.jpg"
+  },
+  {
     "revision": "b4dd3ec36892483b4c96c526cea84bd1",
     "url": "/static/media/boomerang.b4dd3ec3.svg"
   },
@@ -40,16 +44,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bs_acc.f1bc0fdb.jpg"
   },
   {
+    "revision": "461bb192a0320556f9b5bf3eaa266f84",
+    "url": "/static/media/close_modal.461bb192.svg"
+  },
+  {
     "revision": "42399dc1055f582305cffa84f03c2e17",
     "url": "/static/media/dt_acc.42399dc1.jpg"
   },
   {
-    "revision": "ea580a97d784e3e844430c6994355030",
-    "url": "/static/media/hve.ea580a97.jpg"
+    "revision": "c6f97174cc4d558d5a49c2dce21568de",
+    "url": "/static/media/hve.c6f97174.jpg"
   },
   {
-    "revision": "c492e8437c60ff83e6114a46962e32b4",
-    "url": "/static/media/hvq.c492e843.jpg"
+    "revision": "31acd5459ceb3a30eb663e2768c54dc6",
+    "url": "/static/media/hvq.31acd545.jpg"
   },
   {
     "revision": "9dd6d8eba452329b695fcece1b1b94a8",
