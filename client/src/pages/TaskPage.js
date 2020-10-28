@@ -9,6 +9,7 @@ import write from '../media/task_write.png';
 import wait from '../media/task_wait.png';
 import Arrows from '../components/Arrows';
 import Collapse from '../components/Collapse';
+import roll from '../media/roll.svg';
 
 const taskList = [
     {name: "Sleeping", desc: "Even the best researchers would need some sleep at night!", img: sleep}, 
@@ -25,6 +26,7 @@ export default function TaskPage() {
 
     const [task, setTask] = useState({name: "", desc: ""});
     const [open, setOpen] = useState(false);
+    const [rotate, setRotate] = useState(0);
 
     useEffect(() => {
         [placeholder, sleep, review, read, interview, teach, write, wait].forEach(src => {
@@ -45,6 +47,7 @@ export default function TaskPage() {
             let randIndex = Math.floor(Math.random()*(taskList.length));
             let randColor = Math.floor(Math.random()*16777215).toString(16);
             setTask({...taskList[randIndex], desc: "", color: `#${randColor}`});
+            setRotate(prevDeg => prevDeg + 70);
         }, 100);
         setTimeout(() => {
             clearInterval(interval);
@@ -60,22 +63,25 @@ export default function TaskPage() {
 
     return (
         <div>
+            <div className="page-title">
+                Tasks of a researcher
+            </div>
             <div className="task-interactive">
                 <div className="task-title">
                     It's {new Date().toLocaleTimeString().slice(0,-3)}! As a researcher at LSE, you could be...
                 </div>
                 <div className="task-btn">
-                    <button onClick={handleRoll}>Roll!</button>
+                    <img style={{cursor: "pointer", transform: `rotateZ(${rotate}deg)`}} src={roll} width="70px" alt="roll" onClick={handleRoll} />
                 </div>
                 <div className="task-task" style={{"color": task.color}}>
-                    <div className="task-name">{task.name || "Click the button above to roll a task!"}</div>
+                    <div className="task-name">{task.name || "Click on the icon above to roll a task!"}</div>
                     <div className="task-img"><img src={task.img || placeholder} alt={task.name}/></div>
                     <div className="task-desc">{task.desc}</div>
                 </div>  
             </div>
             {open && (
                 <div className="page--content">
-                    <div className="page--paragraph" style={{fontSize: "1.4rem", fontWeight: "bold"}}>Researchers at LSE have many roles. Some of these roles are entirely research-oriented, while others are not. Below are some of the tasks a researcher would most likely perform, as highlighted by Prof. Whitley:</div>
+                    <div className="page--paragraph" style={{fontSize: "1.4rem"}}>Researchers at LSE have many roles. Some of these roles are entirely research-oriented, while others are not. Below are some of the tasks a researcher would most likely perform, as highlighted by Prof. Whitley:</div>
                     <Collapse title="Reading research proposals" color="coral" >
                         {taskList[1].desc}
                     </Collapse>

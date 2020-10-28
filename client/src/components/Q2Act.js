@@ -94,7 +94,7 @@ export default function Q2Act({ isOpen, close }) {
         if(currentPerson !== "BIDEN"){
             setAlertMessage(<div><span>These were the right and wrong choices! How many did you figure out? </span><button onClick={() => handleNextPerson(currentPerson)}>Next person</button></div>);
         }else{
-            setAlertMessage(<div><span>These were the right and wrong choices! How many did you figure out? </span><button onClick={() => handleNextPerson(currentPerson)}>Close modal</button></div>)
+            setAlertMessage(<div><span>Were you able to get most of the tweets right? Have a look at contents of this page now!</span><button onClick={() => handleNextPerson(currentPerson)}>Close modal</button></div>)
         }
     }
 
@@ -138,12 +138,15 @@ export default function Q2Act({ isOpen, close }) {
                    <div className="modal-content">
                         <div className="modal-flex">
                             <div className="modal-question">
-                                <img src={profiles[currentPerson]} />
-                                <div className="modal-question-desc">
-                                    Shown here is a twitter account with some <strong>fake</strong> search data. Could you locate all the <strong>real</strong> tweets sent by this person?
-                                </div>  
+                                <div className="question-wrapper">
+                                    <img src={profiles[currentPerson]} />
+                                    <div className="modal-question-desc">
+                                        Here is a twitter account with some <strong>fake</strong> search data. Can you find all <strong>real</strong> tweets sent by this person?
+                                    </div>  
+                                </div>
                             </div>
                             <div className="tweets">
+                                <div className="tweet-wrapper">
                                     {images.map((img, idx) => (
                                         <div onClick={() => selectImg(idx)} className="tweet-img" key={img.src} style={{display: "inline-block", position: "relative"}}>
                                             <img src={img.src} alt={img.src} />
@@ -151,6 +154,7 @@ export default function Q2Act({ isOpen, close }) {
                                             {img.crossed && <div className="img-label"><img className="tick-cross" src={cross} /></div>}
                                         </div>
                                     ))}
+                                </div>
                             </div>
                         </div>
                         <div className="modal-foot">

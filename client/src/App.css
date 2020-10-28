@@ -6,6 +6,19 @@ p {
   margin: 8px;
 }
 
+a {
+  color: darkgreen;
+}
+
+a:hover {
+  color: purple;
+}
+
+button:hover {
+  background: blue !important;
+  color: white;
+}
+
 * {
   word-wrap: break-word;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -215,10 +228,10 @@ img {
 }
 
 .page-title {
-  margin: 30px 30px 10px 30px;
+  margin: 30px 30px 20px 30px;
   font-size: 2rem;
   font-weight: bold;
-  font-family: Roboto;
+  font-family: "Arial Black"
 }
 
 .page-content {
@@ -307,20 +320,16 @@ img {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: Roboto;
+  background: lime;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .quiz-question {
   margin: 5px;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.quiz-input {
-  margin-top: 4px;
-}
-
-.quiz-label {
-  display: block;
 }
 
 .answer-container {
@@ -346,8 +355,12 @@ img {
 .answer-container button,
 .summary-text button {
   display: block;
-  margin: 5px auto;
+  margin: 7px auto;
   height: 30px;
+  background: yellow;
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .summary-text {
@@ -377,6 +390,11 @@ img {
   font-weight: bold;
 }
 
+.summary-publish {
+  margin: 15px 0;
+  font-size: 1.4rem;
+}
+
 .summary-publish input {
   width: 150px;
   height: 19px;
@@ -385,6 +403,7 @@ img {
   font-size: 1rem;
   background: inherit;
   border-bottom: 1px solid black;
+  color: darkblue;
 }
 
 .summary-publish button {
@@ -409,6 +428,11 @@ img {
   z-index: 9999;
 }
 
+.modal img {
+  border-radius: 5px;
+  outline: 2px solid yellow;
+}
+
 .modal-content {
   position: absolute;
   bottom: 5px;
@@ -424,6 +448,13 @@ img {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  z-index: 9999;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+}
+
+.modal-close img {
+  outline: none;
 }
 
 .modal img {
@@ -432,15 +463,13 @@ img {
 
 .modal-flex {
   display: flex;
-  bottom: 16%;
+  bottom: 40px;
   justify-content: flex-start;
 }
 
 .tweets {
   width: 70%;
   height: 8.5vw;
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 10px;
   cursor: pointer;
 }
@@ -455,18 +484,31 @@ img {
 }
 
 .modal-question {
-  width: 30%;
-  height: calc(100vh - 150px);
+  width: 25%;
+  height: calc(100vh - 160px);
   border-right: 3px solid black;
 }
 
 .modal-question img {
-  width: 90%;
+  height: 300px;
+  width: auto;
 }
 
 .modal-question-desc {
   margin: 10px 5px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+}
+
+.question-wrapper {
+  margin: calc(100vh - 640px) 0;
+}
+
+.tweet-wrapper {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(30vh - 140px) 0;
+  height: 40vh;
 }
 
 .img-label {
@@ -474,8 +516,12 @@ img {
   top: 4px;
   left: 5px;
   width: calc(100% - 10px);
-  height: calc(100% - 15px);
+  height: calc(100% - 10px);
   background: rgba(255, 255, 255, 0.5);
+}
+
+.img-label img {
+  outline: none;
 }
 
 .tick-cross {
@@ -486,17 +532,24 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10%;
+  height: 40px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 40px;
 }
 
 .modal-submit,
 .modal-alert {
-  margin: 20px 0;
+  margin: 8px 0;
 }
 
 .modal-foot button {
-  height: 30px;
+  height: 25px;
   width: 100px;
+  background: rgba(22, 255, 22, 0.8);
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin: 0 10px;
 }
 
 .page--content {
@@ -570,7 +623,97 @@ img {
   margin: 0;
 }
 
-@media only screen and (max-width: 450px) {
+.container {
+  display: block;
+}
+
+@media only screen and (max-width: 1050px) {
+  .modal {
+    position: absolute;
+    top: 10px;
+  }
+
+  .modal-flex {
+    flex-direction: column;
+  }
+
+  .modal-question {
+    width: 100%;
+    height: calc(80vh + 50px);
+  }
+
+  .question-wrapper {
+    margin: 0;
+  }
+
+  .modal-question img {
+    width: auto;
+    height: 80vh;
+  }
+
+  .modal-question-desc {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .modal-foot {
+    height: 60px;
+  }
+
+  .modal-foot button {
+    height: 40px;
+  }
+
+  .tweets {
+    width: 100%;
+    margin: 30px;
+    height: auto;
+  }
+
+  .tweet-wrapper {
+    margin: 0;
+  }
+
+  .tweet-img {
+    height: 20vh;
+  }
+
+  .tweet-img img {
+    height: 18vh;
+  }
+
+  .tweet-img:hover img {
+    height: 18vh;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .modal-foot button {
+    margin-top: 4px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-question-desc {
+    font-size: 0.9rem;
+  }
+
+  .tweet-img {
+    height: 15vh;
+  }
+
+  .tweet-img img {
+    height: 14vh;
+  }
+
+  .tweet-img:hover img {
+    height: 14vh;
+  }
+}
+
+
+@media only screen and (max-width: 465px) {
   .nav-class {
     width: 100px;
     font-size: 1rem;
@@ -603,5 +746,17 @@ img {
 
   .page--bib {
     font-size: 0.7rem;
+  }
+
+  .tweet-img {
+    height: 13vh;
+  }
+
+  .tweet-img img {
+    height: 12vh;
+  }
+
+  .tweet-img:hover img {
+    height: 12vh;
   }
 }

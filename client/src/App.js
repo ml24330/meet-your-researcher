@@ -12,6 +12,7 @@ import RQ4 from './pages/RQ4';
 import FinalQuiz from './pages/FinalQuiz';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import background from './media/background.jpg';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <NavBar />
         <div className="background" style={{backgroundImage: `url(${background})`, opacity: 0.07, backgroundPosition: "top", backgroundSize: "50vw", height: height}} />
         <div className="content">

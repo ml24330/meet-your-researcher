@@ -43,7 +43,7 @@ export default function QuizQuestion({ title, choices, answerIdx, children }) {
                     <div key={idx} className="choice">
                         <img className="quiz-img" src={img} />
                         <input className="quiz-input" type="radio" value={_title} name={title} onChange={e => {setSelected(e.target.value);setReveal(false)}}/>
-                        <label className="quiz-label" htmlFor={_title}>{_title}</label>
+                        <div><label className="quiz-label" htmlFor={_title}>{_title}</label></div>
                     </div>
                 ))} 
                 <div className="quiz-submit">

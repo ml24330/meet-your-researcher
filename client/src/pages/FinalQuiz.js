@@ -83,7 +83,7 @@ export default function FinalQuiz() {
 
     return (
         <div>
-            <div className="page-title">Final quiz</div>
+            <div className="page-title">Summative Quiz</div>
             {currentQ > 0 && (<div className="summary">
                 <table>
                     <tbody>
@@ -107,8 +107,13 @@ export default function FinalQuiz() {
             )}
             {currentQ === 0 && (
                 <div className="summary-text">
-                    Thank you for your interest in Dr Whitley's work! Here's a summative quiz for you to attempt:
-                    <button onClick={handleStart}>Start quiz</button>
+                    Thank you for your interest in Dr Whitley's work! You can attempt a summative quiz below:
+                    <div style={{marginTop: "22vh"}}>
+                        <button onClick={handleStart} style={{height: "40px", width: "150px", fontSize: "1.3rem", margin: "20px auto", background: "lime", border: "2px solid black", borderRadius: "5px", cursor: "pointer"}}>Start quiz</button>
+                        <div className="page--img-desc" style={{fontSize: "0.8rem"}}>
+                            If you answer all questions correctly, you get to publish your completion time to a shared leaderboard!
+                        </div>
+                    </div>
                 </div>
             )}
             {currentQ === 1 && <QuizQuestion title="Q1" choices={[{title: "1", img: img1}, {title: "2", img: img1}, {"title": 3, img: img1}]} answerIdx={1}>
@@ -175,7 +180,7 @@ export default function FinalQuiz() {
                 <div className="page--content">
                 <div className="summary-text">
                     <div className="summary-time">
-                        Game over! You got {numCorrect} correct taking {timeTaken} seconds
+                        Game over! You got {numCorrect} correct in {timeTaken} seconds
                     </div>
                     {!published && numCorrect === 3 && (
                         <div className="summary-publish">

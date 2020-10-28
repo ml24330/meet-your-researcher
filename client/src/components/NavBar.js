@@ -22,7 +22,7 @@ export default function NavBar() {
                         <Link to="/q2">Anonymization and metadata</Link>
                         <Link to="/q3">Garbage In, Garbage Out</Link>
                         <Link to="/q4">Data protection laws</Link>
-                        <Link to="/quiz">Take a quiz</Link>
+                        <Link to="/quiz">Summative quiz</Link>
                     </div>
                 </div>
             </div>
