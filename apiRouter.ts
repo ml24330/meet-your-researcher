@@ -54,7 +54,8 @@ router.post("/publish", async (req, res) => {
 router.get("/scores", async (req, res) => {
     try{
         const scores = await Score.find({});
-        return res.status(200).json(scores);
+        scores.sort((a, b) => a.time > b.time ? 1 : -1)
+        return res.status(200).json(scores.slice(0,15));
     }catch(e){
         return res.status(400).json({error: e.message});
     }

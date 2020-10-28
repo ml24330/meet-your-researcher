@@ -139,7 +139,7 @@ export default function Q2Act({ isOpen, close }) {
                         <div className="modal-flex">
                             <div className="modal-question">
                                 <div className="question-wrapper">
-                                    <img src={profiles[currentPerson]} />
+                                    <img src={profiles[currentPerson]} alt="profile" />
                                     <div className="modal-question-desc">
                                         Here is a twitter account with some <strong>fake</strong> search data. Can you find all <strong>real</strong> tweets sent by this person?
                                     </div>  
@@ -150,8 +150,8 @@ export default function Q2Act({ isOpen, close }) {
                                     {images.map((img, idx) => (
                                         <div onClick={() => selectImg(idx)} className="tweet-img" key={img.src} style={{display: "inline-block", position: "relative"}}>
                                             <img src={img.src} alt={img.src} />
-                                            {img.selected && <div className="img-label"><img className="tick-cross" src={tick} /></div>}
-                                            {img.crossed && <div className="img-label"><img className="tick-cross" src={cross} /></div>}
+                                            {img.selected && <div className="img-label"><img className="tick-cross" alt="label" src={tick} /></div>}
+                                            {img.crossed && <div className="img-label"><img className="tick-cross" alt="label" src={cross} /></div>}
                                         </div>
                                     ))}
                                 </div>

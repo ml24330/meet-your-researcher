@@ -41,7 +41,7 @@ export default function QuizQuestion({ title, choices, answerIdx, children }) {
             <div className="choices-container">
                 {shuffled && shuffled.map(({title: _title, img}, idx) => (
                     <div key={idx} className="choice">
-                        <img className="quiz-img" src={img} />
+                        <img className="quiz-img" alt="quiz-img" src={img} />
                         <input className="quiz-input" type="radio" value={_title} name={title} onChange={e => {setSelected(e.target.value);setReveal(false)}}/>
                         <div><label className="quiz-label" htmlFor={_title}>{_title}</label></div>
                     </div>

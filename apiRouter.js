@@ -131,7 +131,8 @@ router.get("/scores", function (req, res) { return __awaiter(void 0, void 0, voi
                 return [4 /*yield*/, models_1.Score.find({})];
             case 1:
                 scores = _a.sent();
-                return [2 /*return*/, res.status(200).json(scores)];
+                scores.sort(function (a, b) { return a.time > b.time ? 1 : -1; });
+                return [2 /*return*/, res.status(200).json(scores.slice(0, 15))];
             case 2:
                 e_4 = _a.sent();
                 return [2 /*return*/, res.status(400).json({ error: e_4.message })];
