@@ -13,6 +13,7 @@ import FinalQuiz from './pages/FinalQuiz';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import background from './media/background.jpg';
 import ScrollToTop from './components/ScrollToTop';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
             <Route path="/quiz" exact>
               <FinalQuiz />
             </Route>
+            <PageNotFound />
           </Switch>
         </div>
         <Footer />

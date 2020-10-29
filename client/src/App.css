@@ -256,7 +256,7 @@ img {
 .collapse-container {
   text-align: left;
   width: 85%;
-  min-width: 300px;
+  min-width: 200px;
   margin: 0 auto 10px auto;
 }
 
@@ -393,6 +393,8 @@ img {
   right: 15px;
   font-size: 1.5rem;
   font-weight: bold;
+  background: white;
+  border-radius: 10px;
 }
 
 .summary-publish {
@@ -772,6 +774,53 @@ img {
 
   .tweet-img:hover img {
     height: 9vh;
+  }
+
+  table {
+    table-layout: fixed;
+  }
+
+  .summary {
+    margin: 15px auto;
+    font-size: 0.9rem;
+  }
+  
+  .summary table {
+    margin: auto;
+  }
+  
+  .summary td {
+    font-size: 0.5rem;
+    width: 40px;
+  }
+
+  .leaderboard table {
+    width: 200px;
+    transform: translateX(-10px);
+  }
+
+  .leaderboard td {
+    font-size: 0.6rem;
+    width: 30px;
+  }
+
+  .choice {
+    width: 300px;
+    margin-bottom: 20px;
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .quiz-label {
+    font-size: 0.8rem;
+  }
+  
+  .quiz-img {
+    height: 140px;
+    width: auto;
+    max-width: 250px;
+    display: block;
+    margin: 5px auto;
   }
 }
 
