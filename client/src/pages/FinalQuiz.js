@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Arrows from '../components/Arrows';
 import QuizQuestion from '../components/QuizQuestion';
 import Leaderboard from '../components/Leaderboard';
@@ -33,6 +33,13 @@ export default function FinalQuiz() {
     const [published, setPublished] = useState(false);
     const [numCorrect, setNumCorrect] = useState(0);
     const [alertMessage, setAlertMessage] = useState();
+
+    useEffect(() => {
+        [q1_0, q1_1, q1_2, q1_3, q2_0, q2_1, q2_2, q2_3, q3, q4_0, q4_1, q4_2, q4_3, q5_0, q5_1, q5_2].forEach((img) => {
+            let image = new Image();
+            image.src = img;
+        });
+    }, []);
 
     async function handleStart() {
         await fetch("/api/start", {

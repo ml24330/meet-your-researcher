@@ -49,15 +49,13 @@ export default function Q2Act({ isOpen, close }) {
         ];
         shuffleArray(_images);
         setImages(_images);
-        images.map(image => {
+        images.forEach(image => {
             let img = new Image();
             img.src = image.src;
-            return;
         });
-        [tick, cross, close_modal, trump_acc, biden_acc, bernie_acc].map(link => {
+        [tick, cross, close_modal, trump_acc, biden_acc, bernie_acc].forEach(link => {
             let img = new Image();
             img.src = link;
-            return;
         });
     }, []);
 
@@ -68,7 +66,7 @@ export default function Q2Act({ isOpen, close }) {
 
     function selectImg(idx) {
         setImages(prevImages => {
-            const newImages = prevImages.map((img, _idx) => {
+            const newImages = prevImages.forEach((img, _idx) => {
                 const newImg = {...img};
                 if(_idx === idx){
                     newImg.selected = !newImg.selected;
