@@ -295,20 +295,21 @@ img {
   padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .choice {
-  width: 45%;
+  width: 400px;
   margin-bottom: 20px;
   height: 320px;
   margin: 0 10px;
 }
 
 .quiz-img {
-  height: 250px;
-  max-width: 80%;
+  height: 220px;
+  width: auto;
+  max-width: 350px;
   display: block;
   margin: 5px auto;
 }
@@ -657,7 +658,8 @@ img {
 
   .modal-question {
     width: 100%;
-    height: calc(80vh + 50px);
+    border: none;
+    height: auto;
   }
 
   .question-wrapper {
@@ -665,13 +667,13 @@ img {
   }
 
   .modal-question img {
-    width: auto;
-    height: 80vh;
+    width: 90%;
+    height: auto;
   }
 
   .modal-question-desc {
     width: 80vw;
-    margin: auto;
+    margin: 10px auto;
   }
 
   .modal-foot {
@@ -680,12 +682,6 @@ img {
 
   .modal-foot button {
     height: 40px;
-  }
-
-  .tweets {
-    width: 100%;
-    margin: 30px;
-    height: auto;
   }
 
   .tweet-wrapper {
@@ -767,14 +763,15 @@ img {
   }
 
   .tweet-img {
-    height: 13vh;
+    height: 10vh;
   }
 
   .tweet-img img {
-    height: 12vh;
+    height: 9vh;
   }
 
   .tweet-img:hover img {
-    height: 12vh;
+    height: 9vh;
   }
 }
+
