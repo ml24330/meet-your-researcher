@@ -82,7 +82,7 @@ router.post("/end", function (req, res) { return __awaiter(void 0, void 0, void 
                 return [4 /*yield*/, models_1.Time.updateOne({ uuid: req.body.uuid }, { timeTaken: timeTaken })];
             case 3:
                 _a.sent();
-                return [2 /*return*/, res.status(200).json({ timeTaken: (timeTaken / 1000).toPrecision(3) })];
+                return [2 /*return*/, res.status(200).json({ timeTaken: timeTaken })];
             case 4:
                 e_2 = _a.sent();
                 return [2 /*return*/, res.status(400).json({ error: e_2.message })];

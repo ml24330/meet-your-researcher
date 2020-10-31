@@ -27,7 +27,7 @@ router.post("/end", async (req, res) => {
             if(!time) throw Error("Record does not exist!");
             const timeTaken = req.body.endTime - time.start;
             await Time.updateOne({uuid: req.body.uuid}, {timeTaken});
-            return res.status(200).json({timeTaken: (timeTaken/1000).toPrecision(3)});
+            return res.status(200).json({timeTaken: timeTaken});
         }catch(e){
             return res.status(400).json({error: e.message});
         }

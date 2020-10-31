@@ -350,7 +350,7 @@ export default function FinalQuiz() {
                 <div className="page--content">
                 <div className="summary-text">
                     <div className="summary-time">
-                        {numCorrect === 5 ? `Congratulations! You got 5/5 in ${timeTaken} seconds` : `Game over! You got ${numCorrect}/5 correct in ${timeTaken} seconds`}
+                        {numCorrect === 5 ? `Congratulations! You got 5/5 in ${timeTaken} milliseconds` : `Game over! You got ${numCorrect}/5 correct in ${timeTaken} seconds`}
                     </div>
                     {!published && numCorrect === 5 && (
                         <div className="summary-publish">

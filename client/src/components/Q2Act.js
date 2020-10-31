@@ -66,7 +66,7 @@ export default function Q2Act({ isOpen, close }) {
 
     function selectImg(idx) {
         setImages(prevImages => {
-            const newImages = prevImages.forEach((img, _idx) => {
+            const newImages = prevImages.map((img, _idx) => {
                 const newImg = {...img};
                 if(_idx === idx){
                     newImg.selected = !newImg.selected;
@@ -145,7 +145,7 @@ export default function Q2Act({ isOpen, close }) {
                             </div>
                             <div className="tweets">
                                 <div className="tweet-wrapper">
-                                    {images.map((img, idx) => (
+                                    {images && images.map((img, idx) => (
                                         <div onClick={() => selectImg(idx)} className="tweet-img" key={img.src} style={{display: "inline-block", position: "relative"}}>
                                             <img src={img.src} alt={img.src} />
                                             {img.selected && <div className="img-label"><img className="tick-cross" alt="label" src={tick} /></div>}
