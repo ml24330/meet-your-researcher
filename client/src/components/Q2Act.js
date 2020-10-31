@@ -92,7 +92,7 @@ export default function Q2Act({ isOpen, close }) {
         if(currentPerson !== "BIDEN"){
             setAlertMessage(<div><span>These were the right and wrong choices! How many did you figure out? </span><button onClick={() => handleNextPerson(currentPerson)}>Next person</button></div>);
         }else{
-            setAlertMessage(<div><span>Were you able to get most of the tweets right? Have a look at contents of this page now!</span><button onClick={() => handleNextPerson(currentPerson)}>Close modal</button></div>)
+            setAlertMessage(<div><span>Were you able to get most of the tweets right? Why/Why not? Have a look at resources on this page now!</span><button onClick={() => handleNextPerson(currentPerson)}>Close modal</button></div>)
         }
     }
 

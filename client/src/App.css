@@ -487,7 +487,7 @@ img {
 }
 
 .tweet-img:hover img {
-  height: 9.5vw;
+  height: 200px;
 }
 
 .modal-question {
@@ -507,14 +507,14 @@ img {
 }
 
 .question-wrapper {
-  margin: calc(100vh - 640px) 0;
+  margin: 20px 0;
 }
 
 .tweet-wrapper {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  margin: calc(30vh - 140px) 0;
+  margin: 20px 0;
   height: 40vh;
 }
 
