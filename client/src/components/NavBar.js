@@ -11,7 +11,7 @@ export default function NavBar() {
                     <p>Being a researcher</p>
                     <div className="nav-dropdown-content">
                         <Link to="/">About Dr Whitley</Link>
-                        <Link to="/tasks">Tasks</Link>
+                        <Link to="/tasks">Researcher roles</Link>
                         <Link to="/process">Starting a research</Link>
                     </div>
                 </div>

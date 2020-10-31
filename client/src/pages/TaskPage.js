@@ -64,7 +64,7 @@ export default function TaskPage() {
     return (
         <div>
             <div className="page-title">
-                Tasks of a researcher
+                Roles of a researcher
             </div>
             <div className="task-interactive">
                 <div className="task-title">
