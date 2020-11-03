@@ -51,16 +51,22 @@ router.post("/start", function (req, res) { return __awaiter(void 0, void 0, voi
                 if (!(!req.body.startTime || !req.body.uuid)) return [3 /*break*/, 1];
                 return [2 /*return*/, res.status(400).json()];
             case 1:
-                _a.trys.push([1, 3, , 4]);
+                _a.trys.push([1, 5, , 6]);
                 time = new models_1.Time({ uuid: req.body.uuid, start: req.body.startTime });
                 return [4 /*yield*/, time.save()];
             case 2:
                 _a.sent();
-                return [2 /*return*/, res.status(200).json(time)];
+                return [4 /*yield*/, models_1.Time.deleteMany({ timeTaken: { $exists: true } })];
             case 3:
+                _a.sent();
+                return [4 /*yield*/, models_1.Time.deleteMany({ start: { $lt: Date.now() - 1000 * 60 * 60 * 24 } })];
+            case 4:
+                _a.sent();
+                return [2 /*return*/, res.status(200).json(time)];
+            case 5:
                 e_1 = _a.sent();
                 return [2 /*return*/, res.status(400).json({ error: e_1.message })];
-            case 4: return [2 /*return*/];
+            case 6: return [2 /*return*/];
         }
     });
 }); });

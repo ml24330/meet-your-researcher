@@ -11,6 +11,8 @@ router.post("/start", async (req, res) => {
         try{
             const time = new Time({uuid: req.body.uuid, start: req.body.startTime});
             await time.save();
+            await Time.deleteMany({timeTaken: {$exists: true}});
+            await Time.deleteMany({start: {$lt: Date.now() - 1000*60*60*24}});
             return res.status(200).json(time);
         }catch(e){
             return res.status(400).json({error: e.message});
@@ -54,7 +56,7 @@ router.post("/publish", async (req, res) => {
 router.get("/scores", async (req, res) => {
     try{
         const scores = await Score.find({});
-        scores.sort((a, b) => a.time > b.time ? 1 : -1)
+        scores.sort((a, b) => a.time > b.time ? 1 : -1);
         return res.status(200).json(scores.slice(0,15));
     }catch(e){
         return res.status(400).json({error: e.message});
