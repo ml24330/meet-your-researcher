@@ -25,7 +25,7 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div style={{"position": "absolute", "height": "40px", "left": "calc(100vw - 80px)"}}>
-                    <button style={{height: "40px", width: "70px", fontSize: "max(1.8vw, 0.8rem)", borderRadius: "10px", background: "yellow", border: "none"}}>
+                    <button style={{height: "40px", width: "70px", fontSize: "max(1.4vw, 0.9rem)", borderRadius: "10px", background: "yellow", border: "none"}}>
                         <Link to="quiz" style={{color: "coral", textDecoration: "none", fontFamily: "Arial", fontWeight: "bold"}}>Quiz</Link>
                     </button>
                 </div>
