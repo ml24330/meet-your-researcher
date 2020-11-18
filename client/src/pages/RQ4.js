@@ -42,6 +42,10 @@ export default function RQ4() {
                     </Collapse>
                     <p>In conclusion, “It is not simple to say. Ultimately, these laws don’t stop the government and companies from misusing personal data but legal processes can be followed and do provide a way of legally fighting against companies.”</p>
                 </div>
+                <div className="page--bib">
+                    <p>Gus Hosein and Edgar Whitley (2016) : Identity, policy, and privacy https://www.reddit.com/r/india/comments/4bmka5/identity_policy_and_privacy/</p>
+                    <p>Andrada Coos (2020, January 6) : Data Protection Legislation around the World in 2020</p>
+                </div>
             </div>
             <Arrows from="q3" to="/quiz" from_name={<><span style={{color: "darkred"}}>Q3: </span>Garbage In, Garbage Out</>} to_name="Take a quiz" />
         </div>

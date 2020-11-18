@@ -22,8 +22,12 @@ export default function NavBar() {
                         <Link to="/q2">Anonymization and metadata</Link>
                         <Link to="/q3">Garbage In, Garbage Out</Link>
                         <Link to="/q4">Data protection laws</Link>
-                        <Link to="/quiz">Summative quiz</Link>
                     </div>
+                </div>
+                <div style={{"position": "absolute", "height": "40px", "right": "10px"}}>
+                    <button style={{height: "40px", width: "70px", fontSize: "1.3rem", borderRadius: "10px", background: "yellow", border: "none"}}>
+                        <Link to="quiz" style={{color: "coral", textDecoration: "none", fontFamily: "Arial", fontWeight: "bold"}}>Quiz</Link>
+                    </button>
                 </div>
             </div>
         </div>
